@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bản Đồ Thử Thách - EduVerse</title>
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+    <!-- 1. HEADER & MENU ĐIỀU HƯỚNG -->
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo-link">
+                <span class="logo-icon">✨</span>
+                <span class="text-gradient" style="font-weight: 800;">EduVerse</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Trang Chủ</a>
+                <a href="lessons.html" class="nav-link">Thử Thách</a>
+                <a href="exams.html" class="nav-link">Chướng Ngại Vật</a>
+                <a href="playground.html" class="nav-link">Thực Hành</a>
+                <a href="glossary.html" class="nav-link">Tra Cứu</a>
+            </nav>
+            <div class="header-actions">
+                <button class="theme-toggle-btn" aria-label="Đổi giao diện">🌙</button>
+                <a href="lessons.html" class="btn btn-primary btn-sm">Chinh Phục Ngay</a>
+                <button class="mobile-nav-toggle" aria-label="Mở menu di động">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Drawer cho Mobile -->
+    <div class="drawer-overlay"></div>
+    <div class="mobile-drawer">
+        <div class="drawer-header">
+            <a href="index.html" class="logo-link">
+                <span class="logo-icon">✨</span>
+                <span class="text-gradient" style="font-weight: 800;">EduVerse</span>
+            </a>
+            <button class="drawer-close-btn" aria-label="Đóng menu">&times;</button>
+        </div>
+        <div class="drawer-menu">
+            <a href="index.html" class="drawer-link">Trang Chủ</a>
+            <a href="lessons.html" class="drawer-link">Thử Thách</a>
+            <a href="exams.html" class="drawer-link">Chướng Ngại Vật</a>
+            <a href="playground.html" class="drawer-link">Thực Hành</a>
+            <a href="glossary.html" class="drawer-link">Tra Cứu</a>
+        </div>
+        <a href="lessons.html" class="btn btn-primary btn-full">Chinh Phục Ngay</a>
+    </div>
+
+    <!-- 2. NỘI DUNG CHÍNH (MAIN CONTENT) -->
+    <main class="lessons-container">
+        <div class="container">
+            <!-- Page Header -->
+            <div class="section-title">
+                <h2>Hành trình: Lập trình Web Front-end</h2>
+                <p>Nắm vững kỹ năng xây dựng trang web từ căn bản đến tương tác cao. Chọn thử thách bên dưới để bắt đầu cuộc phiêu lưu của bạn.</p>
+            </div>
+
+            <!-- CHƯƠNG 1 -->
+            <div class="chapter-block" id="chapter-1">
+                <div class="chapter-header">
+                    <h2>Chương 1: HTML5 - Cấu trúc Trang Web</h2>
+                    <span class="chapter-progress-label" id="prog-chap1">Đã vượt qua: 0/2 thử thách</span>
+                </div>
+                <div class="lesson-grid">
+                    <!-- Lesson 1 Card -->
+                    <div class="lesson-card glass-card" data-lesson-id="les1">
+                        <div class="lesson-meta">
+                            <span class="badge badge-primary">Cơ bản</span>
+                            <span>⏱️ 10 phút</span>
+                        </div>
+                        <h3>Thử thách 1: Tổng quan và Cấu trúc Tài liệu HTML5</h3>
+                        <p>Chinh phục cấu trúc thẻ xương sườn của trang web, cách khai báo DOCTYPE và các khối tiêu đề văn bản cơ bản.</p>
+                        <div class="lesson-footer">
+                            <div class="lesson-status-badge" data-badge-id="les1">
+                                <span class="badge badge-secondary">Chưa chinh phục</span>
+                            </div>
+                            <a href="lesson-detail.html?id=les1" class="btn btn-primary btn-sm">Chinh Phục</a>
+                        </div>
+                    </div>
+ 
+                    <!-- Lesson 2 Card -->
+                    <div class="lesson-card glass-card" data-lesson-id="les2">
+                        <div class="lesson-meta">
+                            <span class="badge badge-primary">Cơ bản</span>
+                            <span>⏱️ 12 phút</span>
+                        </div>
+                        <h3>Thử thách 2: Thẻ Đa phương tiện & Liên kết</h3>
+                        <p>Thêm sức sống cho website bằng hình ảnh, âm thanh, video clip và các đường dẫn liên kết ngoài.</p>
+                        <div class="lesson-footer">
+                            <div class="lesson-status-badge" data-badge-id="les2">
+                                <span class="badge badge-secondary">Chưa chinh phục</span>
+                            </div>
+                            <a href="lesson-detail.html?id=les2" class="btn btn-primary btn-sm">Chinh Phục</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CHƯƠNG 2 -->
+            <div class="chapter-block" id="chapter-2">
+                <div class="chapter-header">
+                    <h2>Chương 2: CSS3 - Định dạng Giao diện</h2>
+                    <span class="chapter-progress-label" id="prog-chap2">Đã vượt qua: 0/3 thử thách</span>
+                </div>
+                <div class="lesson-grid">
+                    <!-- Lesson 3 Card -->
+                    <div class="lesson-card glass-card" data-lesson-id="les3">
+                        <div class="lesson-meta">
+                            <span class="badge badge-secondary">Trung bình</span>
+                            <span>⏱️ 15 phút</span>
+                        </div>
+                        <h3>Thử thách 3: CSS Căn bản & Selector</h3>
+                        <p>Bắt đầu làm đẹp trang web bằng màu sắc, font chữ và tìm hiểu mô hình hộp (Box Model) kinh điển trong CSS.</p>
+                        <div class="lesson-footer">
+                            <div class="lesson-status-badge" data-badge-id="les3">
+                                <span class="badge badge-secondary">Chưa chinh phục</span>
+                            </div>
+                            <a href="lesson-detail.html?id=les3" class="btn btn-primary btn-sm">Chinh Phục</a>
+                        </div>
+                    </div>
+ 
+                    <!-- Lesson 4 Card -->
+                    <div class="lesson-card glass-card" data-lesson-id="les4">
+                        <div class="lesson-meta">
+                            <span class="badge badge-secondary">Trung bình</span>
+                            <span>⏱️ 18 phút</span>
+                        </div>
+                        <h3>Thử thách 4: Bố cục Trang Web với Flexbox</h3>
+                        <p>Giải quyết triệt để bài toán dàn hàng ngang/dọc, căn giữa tuyệt đối và co giãn giao diện responsive linh hoạt.</p>
+                        <div class="lesson-footer">
+                            <div class="lesson-status-badge" data-badge-id="les4">
+                                <span class="badge badge-secondary">Chưa chinh phục</span>
+                            </div>
+                            <a href="lesson-detail.html?id=les4" class="btn btn-primary btn-sm">Chinh Phục</a>
+                        </div>
+                    </div>
+ 
+                    <!-- Lesson Grid Card -->
+                    <div class="lesson-card glass-card" data-lesson-id="les_grid">
+                        <div class="lesson-meta">
+                            <span class="badge badge-secondary">Trung bình</span>
+                            <span>⏱️ 15 phút</span>
+                        </div>
+                        <h3>Thử thách 5: Bố cục Nâng cao với CSS Grid</h3>
+                        <p>Tìm hiểu mô hình lưới hai chiều mạnh mẽ giúp chia vùng layout và căn chỉnh cột hàng linh hoạt.</p>
+                        <div class="lesson-footer">
+                            <div class="lesson-status-badge" data-badge-id="les_grid">
+                                <span class="badge badge-secondary">Chưa chinh phục</span>
+                            </div>
+                            <a href="lesson-detail.html?id=les_grid" class="btn btn-primary btn-sm">Chinh Phục</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CHƯƠNG 3 -->
+            <div class="chapter-block" id="chapter-3">
+                <div class="chapter-header">
+                    <h2>Chương 3: JavaScript - Tạo Tương Tác</h2>
+                    <span class="chapter-progress-label" id="prog-chap3">Đã vượt qua: 0/3 thử thách</span>
+                </div>
+                <div class="lesson-grid">
+                    <!-- Lesson 5 Card -->
+                    <div class="lesson-card glass-card" data-lesson-id="les5">
+                        <div class="lesson-meta">
+                            <span class="badge badge-secondary">Trung bình</span>
+                            <span>⏱️ 20 phút</span>
+                        </div>
+                        <h3>Thử thách 6: Biến, Kiểu Dữ Liệu & DOM cơ bản</h3>
+                        <p>Làm quen với lập trình JS, khai báo let/const và cách sử dụng script để điều khiển trực tiếp cấu trúc HTML.</p>
+                        <div class="lesson-footer">
+                            <div class="lesson-status-badge" data-badge-id="les5">
+                                <span class="badge badge-secondary">Chưa chinh phục</span>
+                            </div>
+                            <a href="lesson-detail.html?id=les5" class="btn btn-primary btn-sm">Chinh Phục</a>
+                        </div>
+                    </div>
+ 
+                    <!-- Lesson 6 Card -->
+                    <div class="lesson-card glass-card" data-lesson-id="les6">
+                        <div class="lesson-meta">
+                            <span class="badge badge-secondary">Trung bình</span>
+                            <span>⏱️ 15 phút</span>
+                        </div>
+                        <h3>Thử thách 7: Mảng và Đối tượng trong JavaScript</h3>
+                        <p>Tìm hiểu hai kiểu dữ liệu phức hợp cốt lõi của JavaScript giúp lưu trữ danh sách các phần tử và các thực thể nhiều thuộc tính.</p>
+                        <div class="lesson-footer">
+                            <div class="lesson-status-badge" data-badge-id="les6">
+                                <span class="badge badge-secondary">Chưa chinh phục</span>
+                            </div>
+                            <a href="lesson-detail.html?id=les6" class="btn btn-primary btn-sm">Chinh Phục</a>
+                        </div>
+                    </div>
+ 
+                    <!-- Lesson 7 Card -->
+                    <div class="lesson-card glass-card" data-lesson-id="les7">
+                        <div class="lesson-meta">
+                            <span class="badge badge-secondary">Trung bình</span>
+                            <span>⏱️ 18 phút</span>
+                        </div>
+                        <h3>Thử thách 8: Lắng nghe & Xử lý Sự kiện DOM</h3>
+                        <p>Học cách sử dụng addEventListener để bắt các sự kiện tương tác của người dùng như click chuột, nhập text và gõ phím.</p>
+                        <div class="lesson-footer">
+                            <div class="lesson-status-badge" data-badge-id="les7">
+                                <span class="badge badge-secondary">Chưa chinh phục</span>
+                            </div>
+                            <a href="lesson-detail.html?id=les7" class="btn btn-primary btn-sm">Chinh Phục</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- 3. FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>✨ <span class="text-gradient">EduVerse</span></h3>
+                    <p>Chinh phục thử thách, vượt qua chướng ngại vật. Cùng bạn kiến tạo tương lai số hóa trong giáo dục.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Đường dẫn nhanh</h4>
+                    <ul>
+                        <li><a href="index.html">Trang Chủ</a></li>
+                        <li><a href="lessons.html">Thử Thách</a></li>
+                        <li><a href="exams.html">Chướng Ngại Vật</a></li>
+                        <li><a href="playground.html">Thực Hành</a></li>
+                        <li><a href="glossary.html">Tra Cứu</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Chinh phục thử thách</h4>
+                    <ul>
+                        <li><a href="lessons.html">HTML5 Căn bản</a></li>
+                        <li><a href="lessons.html">CSS3 Nâng cao</a></li>
+                        <li><a href="lessons.html">JavaScript DOM</a></li>
+                        <li><a href="exams.html">Vượt chướng ngại vật cuối kì</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Môn học</h4>
+                    <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 0.5rem;">Phát triển Web, Apps trong Giáo dục</p>
+                    <p style="font-size: 0.95rem; color: var(--text-secondary);">GVHD: TS. Nguyễn Văn A</p>
+                    <p style="font-size: 0.95rem; color: var(--text-secondary); margin-top: 0.5rem;">
+                        <a href="https://www.figma.com/file/nhom05_eduverse_design" target="_blank" style="text-decoration: underline;">🎨 Bản thiết kế Figma</a>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 EduVerse. Sản phẩm phục vụ kỳ thi kết thúc học phần. All rights reserved.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Facebook">📘</a>
+                    <a href="#" aria-label="Github">🐙</a>
+                    <a href="#" aria-label="Youtube">📺</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Files -->
+    <script src="js/db.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            updateLessonStatusBadges();
+        });
+
+        function updateLessonStatusBadges() {
+            const completed = JSON.parse(localStorage.getItem('eduverse_completed_lessons') || '[]');
+            
+            // Định nghĩa số thử thách trong mỗi chương để tính tiến độ chương
+            const chapters = {
+                chap1: { lessons: ['les1', 'les2'], textId: 'prog-chap1', title: 'Chương 1' },
+                chap2: { lessons: ['les3', 'les4', 'les_grid'], textId: 'prog-chap2', title: 'Chương 2' },
+                chap3: { lessons: ['les5', 'les6', 'les7'], textId: 'prog-chap3', title: 'Chương 3' }
+            };
+
+            // Cập nhật badge từng thử thách
+            const badges = document.querySelectorAll('.lesson-status-badge');
+            badges.forEach(badge => {
+                const lessonId = badge.getAttribute('data-badge-id');
+                if (completed.includes(lessonId)) {
+                    badge.innerHTML = `<span class="badge badge-success">✓ Đã vượt qua</span>`;
+                } else {
+                    badge.innerHTML = `<span class="badge badge-secondary">Chưa chinh phục</span>`;
+                }
+            });
+
+            // Cập nhật tiến độ từng chương
+            for (const key in chapters) {
+                const chap = chapters[key];
+                let doneInChap = 0;
+                chap.lessons.forEach(lId => {
+                    if (completed.includes(lId)) doneInChap++;
+                });
+
+                const textEl = document.getElementById(chap.textId);
+                if (textEl) {
+                    textEl.textContent = `Đã vượt qua: ${doneInChap}/${chap.lessons.length} thử thách`;
+                    if (doneInChap === chap.lessons.length) {
+                        textEl.style.color = 'var(--success)';
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

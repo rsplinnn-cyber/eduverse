@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kết quả vượt ải - EduVerse</title>
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+    <!-- 1. HEADER & MENU ĐIỀU HƯỚNG -->
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo-link">
+                <span class="logo-icon">✨</span>
+                <span class="text-gradient" style="font-weight: 800;">EduVerse</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Trang Chủ</a>
+                <a href="lessons.html" class="nav-link">Thử Thách</a>
+                <a href="exams.html" class="nav-link">Chướng Ngại Vật</a>
+                <a href="playground.html" class="nav-link">Thực Hành</a>
+                <a href="glossary.html" class="nav-link">Tra Cứu</a>
+            </nav>
+            <div class="header-actions">
+                <button class="theme-toggle-btn" aria-label="Đổi giao diện">🌙</button>
+                <a href="lessons.html" class="btn btn-primary btn-sm">Chinh Phục Ngay</a>
+                <button class="mobile-nav-toggle" aria-label="Mở menu di động">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Drawer cho Mobile -->
+    <div class="drawer-overlay"></div>
+    <div class="mobile-drawer">
+        <div class="drawer-header">
+            <a href="index.html" class="logo-link">
+                <span class="logo-icon">✨</span>
+                <span class="text-gradient" style="font-weight: 800;">EduVerse</span>
+            </a>
+            <button class="drawer-close-btn">&times;</button>
+        </div>
+        <div class="drawer-menu">
+            <a href="index.html" class="drawer-link">Trang Chủ</a>
+            <a href="lessons.html" class="drawer-link">Thử Thách</a>
+            <a href="exams.html" class="drawer-link">Chướng Ngại Vật</a>
+            <a href="playground.html" class="drawer-link">Thực Hành</a>
+            <a href="glossary.html" class="drawer-link">Tra Cứu</a>
+        </div>
+        <a href="lessons.html" class="btn btn-primary btn-full">Chinh Phục Ngay</a>
+    </div>
+
+    <!-- 2. NỘI DUNG CHÍNH (MAIN CONTENT) -->
+    <main class="result-layout">
+        <!-- Canvas for Confetti animation -->
+        <canvas id="confetti-canvas" style="position: fixed; top:0; left:0; width:100vw; height:100vh; pointer-events:none; z-index:999;"></canvas>
+
+        <div class="container">
+            <div class="section-title">
+                <h2>Thành Tích Vượt Ải</h2>
+                <p id="result-exam-name">Đang tải chướng ngại vật...</p>
+            </div>
+
+            <!-- Tổng kết điểm số -->
+            <div class="result-card glass-card">
+                <!-- Vòng tròn điểm số -->
+                <div class="result-score-circle" id="result-score-val">0.0</div>
+                
+                <!-- Nhận xét chung -->
+                <div class="result-verdict" id="result-verdict-text">Đang đánh giá kết quả...</div>
+                
+                <!-- Bảng thống kê chi tiết -->
+                <div class="result-stats-row">
+                    <div class="result-stat-box">
+                        <h4 id="stat-score-lbl">0 / 10</h4>
+                        <p>Điểm số</p>
+                    </div>
+                    <div class="result-stat-box">
+                        <h4 id="stat-correct-lbl">0/0</h4>
+                        <p>Số câu đúng</p>
+                    </div>
+                    <div class="result-stat-box">
+                        <h4 id="stat-time-lbl">00:00</h4>
+                        <p>Thời gian vượt ải</p>
+                    </div>
+                    <div class="result-stat-box">
+                        <h4 id="stat-accuracy-lbl">0%</h4>
+                        <p>Tỷ lệ chính xác</p>
+                    </div>
+                </div>
+
+                <!-- Các nút hành động -->
+                <div class="result-buttons">
+                    <button class="btn btn-secondary" id="result-back-btn">Trở lại danh sách thử thách</button>
+                    <button class="btn btn-primary" id="result-retake-btn">Chinh phục lại thử thách</button>
+                </div>
+            </div>
+
+            <!-- Xem lại chi tiết từng đáp án -->
+            <div>
+                <h3 class="review-title">Xem lại đáp án chi tiết</h3>
+                <div class="review-list" id="result-review-container">
+                    <!-- Populated dynamically (Review Items) -->
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- 3. FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>✨ <span class="text-gradient">EduVerse</span></h3>
+                    <p>Chinh phục thử thách, vượt qua chướng ngại vật. Cùng bạn kiến tạo tương lai số hóa trong giáo dục.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Đường dẫn nhanh</h4>
+                    <ul>
+                        <li><a href="index.html">Trang Chủ</a></li>
+                        <li><a href="lessons.html">Thử Thách</a></li>
+                        <li><a href="exams.html">Chướng Ngại Vật</a></li>
+                        <li><a href="playground.html">Thực Hành</a></li>
+                        <li><a href="glossary.html">Tra Cứu</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Chinh phục thử thách</h4>
+                    <ul>
+                        <li><a href="lessons.html">HTML5 Căn bản</a></li>
+                        <li><a href="lessons.html">CSS3 Nâng cao</a></li>
+                        <li><a href="lessons.html">JavaScript DOM</a></li>
+                        <li><a href="exams.html">Vượt chướng ngại vật cuối kì</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Môn học</h4>
+                    <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 0.5rem;">Phát triển Web, Apps trong Giáo dục</p>
+                    <p style="font-size: 0.95rem; color: var(--text-secondary);">GVHD: TS. Nguyễn Văn A</p>
+                    <p style="font-size: 0.95rem; color: var(--text-secondary); margin-top: 0.5rem;">
+                        <a href="https://www.figma.com/file/nhom05_eduverse_design" target="_blank" style="text-decoration: underline;">🎨 Bản thiết kế Figma</a>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 EduVerse. Sản phẩm phục vụ kỳ thi kết thúc học phần. All rights reserved.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Facebook">📘</a>
+                    <a href="#" aria-label="Github">🐙</a>
+                    <a href="#" aria-label="Youtube">📺</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Files -->
+    <script src="js/db.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/result.js"></script>
+</body>
+</html>

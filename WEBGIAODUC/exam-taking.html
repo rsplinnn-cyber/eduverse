@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đang vượt ải - EduVerse</title>
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+</head>
+<body style="min-height: 100vh; display: flex; flex-direction: column;">
+
+    <!-- 1. EXAM DISTRACTION-FREE TOP HEADER -->
+    <header class="exam-header">
+        <div class="container exam-header-container">
+            <!-- Quit Button -->
+            <button class="btn btn-secondary btn-sm" id="quit-exam-btn" style="font-weight: 600;">
+                🚪 Thoát
+            </button>
+            <!-- Exam Title -->
+            <div class="exam-title-text" id="exam-header-title">Chướng ngại vật: Đang tải...</div>
+            <!-- Countdown Timer -->
+            <div class="exam-timer-box" id="exam-timer">
+                ⏱️ <span id="timer-text">00:00</span>
+            </div>
+            <!-- Quick Submit Button -->
+            <button class="btn btn-accent btn-sm" id="quick-submit-btn">
+                📤 Nộp bài vượt ải
+            </button>
+        </div>
+        <!-- Progress Tracker Bar -->
+        <div class="exam-progress-tracker">
+            <div class="exam-progress-fill" id="exam-progress-bar"></div>
+        </div>
+    </header>
+
+    <!-- 2. EXAM RUNNER LAYOUT -->
+    <main class="container" style="flex-grow: 1;">
+        <div class="exam-runner-layout">
+            
+            <!-- Vùng câu hỏi bên trái -->
+            <div class="exam-question-area glass-card">
+                <!-- Header câu hỏi: Số câu & Đánh dấu -->
+                <div class="exam-question-header">
+                    <span id="question-index-label" class="badge badge-primary">Câu 1 / 10</span>
+                    <label class="exam-flag-check">
+                        <input type="checkbox" id="flag-checkbox">
+                        🚩 Đánh dấu xem lại
+                    </label>
+                </div>
+                
+                <!-- Nội dung câu hỏi -->
+                <div class="exam-question-title" id="question-text">
+                    Đang tải nội dung câu hỏi...
+                </div>
+                
+                <!-- Các lựa chọn đáp án -->
+                <div id="options-container">
+                    <!-- Populated dynamically (Option Cards) -->
+                </div>
+                
+                <!-- Nút điều hướng câu hỏi -->
+                <div class="exam-action-buttons">
+                    <button class="btn btn-secondary" id="prev-q-btn">Câu trước</button>
+                    <button class="btn btn-primary" id="next-q-btn">Câu tiếp theo</button>
+                </div>
+            </div>
+
+            <!-- Vùng palette định vị bên phải -->
+            <div class="exam-sidebar-nav glass-card">
+                <div class="palette-title">Bản đồ vượt ải</div>
+                
+                <div class="palette-grid" id="question-palette-grid">
+                    <!-- Populated dynamically (Palette buttons) -->
+                </div>
+                
+                <!-- Chú thích trạng thái -->
+                <div class="palette-legend">
+                    <div class="legend-item">
+                        <div class="legend-color unanswered"></div>
+                        <span>Chưa trả lời</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color answered"></div>
+                        <span>Đã trả lời</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color flagged"></div>
+                        <span>🚩 Đánh dấu xem lại</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color current"></div>
+                        <span>Đang chọn</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- 3. MODAL XÁC NHẬN NỘP BÀI (SUBMIT MODAL) -->
+    <div class="modal-overlay" id="submit-confirm-modal">
+        <div class="modal-container">
+            <h2>Nộp bài vượt ải</h2>
+            <p style="margin: 1rem 0; color: var(--text-secondary);" id="submit-modal-stats-text">
+                Bạn đã trả lời được 0/10 câu hỏi.
+            </p>
+            <p style="margin-bottom: 2rem; color: var(--text-muted); font-size: 0.9rem;">
+                Bạn có chắc chắn muốn nộp bài để vượt qua chướng ngại vật ngay bây giờ? Sau khi nộp bài, bạn sẽ không thể chỉnh sửa câu trả lời nữa.
+            </p>
+            <div style="display: flex; gap: 1rem;">
+                <button class="btn btn-secondary btn-full" id="confirm-cancel-btn">Làm tiếp</button>
+                <button class="btn btn-accent btn-full" id="confirm-submit-btn">Đồng ý nộp bài vượt ải</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS Files -->
+    <script src="js/db.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/exam.js"></script>
+</body>
+</html>
